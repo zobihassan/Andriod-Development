@@ -1,0 +1,181 @@
+package com.example.hennadesigns;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Fronthand extends AppCompatActivity {
+
+    private int[] imageIds = {
+
+            R.drawable.fhand1,
+            R.drawable.fhand2,
+            R.drawable.fhand3,
+            R.drawable.fhand4,
+            R.drawable.fhand5,
+            R.drawable.fhand6,
+            R.drawable.fhand7,
+            R.drawable.fhand10,
+            R.drawable.fhand8,
+            R.drawable.fhand9,
+            R.drawable.fhand11,
+            R.drawable.fhand12,
+            R.drawable.fhand13,
+            R.drawable.fhand14,
+            R.drawable.fhand15,
+            R.drawable.fhand16,
+            R.drawable.fhand17,
+            R.drawable.fhand18,
+            R.drawable.fhand19,
+            R.drawable.fhand20,
+            R.drawable.fhand21,
+            R.drawable.fhand22,
+            R.drawable.fhand23,
+            R.drawable.fhand24,
+            R.drawable.fhand25,
+            R.drawable.fhand26,
+            R.drawable.fhand27,
+            R.drawable.fhand28,
+            R.drawable.fhand29,
+            R.drawable.fhand30,
+            R.drawable.fhand31,
+            R.drawable.fhand32,
+            R.drawable.fhand33,
+            R.drawable.fhand34,
+            R.drawable.fhand35,
+            R.drawable.fhand36,
+            R.drawable.fhand37,
+            R.drawable.fhand38,
+            R.drawable.fhand39,
+            R.drawable.fhand40,
+            R.drawable.fhand41,
+            R.drawable.fhand42,
+            R.drawable.fhand43,
+            R.drawable.fhand44,
+            R.drawable.fhand45,
+            R.drawable.fhand46,
+            R.drawable.fhand47,
+            R.drawable.fhand48,
+            R.drawable.fhand49,
+            R.drawable.fhand50,
+            R.drawable.fhand51,
+            R.drawable.fhand52,
+            R.drawable.fhand53,
+            R.drawable.fhand54,
+            R.drawable.fhand55,
+            R.drawable.fhand56,
+            R.drawable.fhand57,
+            R.drawable.fhand58,
+            R.drawable.fhand59,
+            R.drawable.fhand60,
+            R.drawable.fhand61,
+            R.drawable.fhand62,
+            R.drawable.fhand63,
+            R.drawable.fhand64,
+            R.drawable.fhand65,
+            R.drawable.fhand66,
+            R.drawable.fhand67,
+            R.drawable.fhand68,
+            R.drawable.fhand69,
+            R.drawable.fhand70,
+            R.drawable.fhand71,
+            R.drawable.fhand72,
+            R.drawable.fhand73,
+            R.drawable.fhand74,
+            R.drawable.fhand75,
+            R.drawable.fhand76,
+            R.drawable.fhand77,
+            R.drawable.fhand78,
+            R.drawable.fhand79,
+            R.drawable.fhand80,
+            R.drawable.fhand81,
+            R.drawable.fhand82,
+            R.drawable.fhand83,
+            R.drawable.fhand84,
+            R.drawable.fhand85,
+            R.drawable.fhand85,
+            R.drawable.fhand86,
+            R.drawable.fhand87,
+            R.drawable.fhand88,
+            R.drawable.fhand89,
+            R.drawable.fhand90,
+            R.drawable.fhand91,
+            R.drawable.fhand92,
+            R.drawable.fhand93,
+            R.drawable.fhand94,
+            R.drawable.fhand95,
+            R.drawable.fhand96,
+            R.drawable.fhand97,
+            R.drawable.fhand98,
+            R.drawable.fhand99,
+            R.drawable.fhand100,
+            R.drawable.fhand101,
+            R.drawable.fhand102,
+            R.drawable.fhand103,
+            R.drawable.fhand104,
+            R.drawable.fhand105,
+            R.drawable.fhand106,
+            R.drawable.fhand107,
+            R.drawable.fhand108,
+            R.drawable.fhand109,
+            R.drawable.fhand110,
+            R.drawable.fhand111,
+            R.drawable.fhand112,
+            R.drawable.fhand113,
+            R.drawable.fhand114,
+            R.drawable.fhand115,
+            R.drawable.fhand116,
+            R.drawable.fhand117,
+            R.drawable.fhand118,
+            R.drawable.fhand119,
+            R.drawable.fhand120,
+            R.drawable.fhand121,
+            R.drawable.fhand122,
+            R.drawable.fhand123,
+            R.drawable.fhand124,
+            R.drawable.fhand125,
+            R.drawable.fhand126,
+            R.drawable.fhand127,
+            R.drawable.fhand128,
+            R.drawable.fhand129,
+            R.drawable.fhand130,
+            R.drawable.fhand131,
+            R.drawable.fhand132,
+            R.drawable.fhand133,
+            R.drawable.fhand134,
+            R.drawable.fhand135,
+            R.drawable.fhand136,
+            R.drawable.fhand137,
+            R.drawable.fhand138,
+            R.drawable.fhand139,
+            R.drawable.fhand140,
+            R.drawable.fhand141,
+            R.drawable.fhand142,
+            R.drawable.fhand143,
+            R.drawable.fhand144,
+            R.drawable.fhand145,
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_fronthand);
+
+        GridView gridView = findViewById(R.id.grid_view);
+        Fronthand_Adapter adapter = new Fronthand_Adapter(this, imageIds);
+        gridView.setAdapter(adapter);
+
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Fronthand.this, Fronthand_ViewerActivity                                                                                         .class);
+                intent.putExtra("position", position);
+                startActivity(intent);
+            }
+        });
+    }
+}
